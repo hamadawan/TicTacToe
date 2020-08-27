@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import FirstPage from './Components/FirstPage';
+import SecondPage from './Components/SecondPage';
+import { useSelector } from 'react-redux';
 
 function App() {
+
+  const start = useSelector(state => state)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    (!start.gameStart) ? <FirstPage /> : <SecondPage />
   );
+
 }
 
 export default App;
