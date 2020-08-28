@@ -78,21 +78,6 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 counter: action.payload.number
             }
-        case 'draw':
-            return {
-                ...state,
-                matchStatus: "DRAW",
-                player1:{
-                    ...state.player1,
-                    gameWins: state.player1.gameWins + 1,
-                    winStatus: true,
-                },
-                player2:{
-                    ...state.player2,
-                    gameWins: state.player2.gameWins + 1,
-                    winStatus: true,
-                }
-            }
         case 'reSetGame':
             return {
                 ...state,

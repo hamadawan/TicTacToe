@@ -24,7 +24,10 @@ function Welcome() {
         <input className="PlayerTwoName" type="text" value={player2} onChange={(e)=> setPlayer2(e.target.value)}/>
       </div>
       <div className="Continue" onClick={() => {
-            dispatch(startGame(player1,player2));
+            if(player1.length!=0 && player2.length!=0)
+              dispatch(startGame(player1,player2));
+            else
+              alert("Enter Players Name to Continue!")
           }} >
         <div className="ContinueText">Continue</div>
       </div>

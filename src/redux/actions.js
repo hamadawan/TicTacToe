@@ -40,10 +40,6 @@ export const counter = (number) => ({
 
 });
 
-export const draw = () => ({
-    type: "draw",
-});
-
 export const reSetGame = (grid) => ({
     type: "reSetGame",
     payload:{

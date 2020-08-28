@@ -59,8 +59,6 @@ function CheckBox() {
                                 else if(state.counter+1==9)
                                 {
                                     dispatch(matchStatus("DRAW"))
-                                    dispatch(winGame(1))
-                                    dispatch(winGame(2))
                                 }
                                 setGameOver(res)
                             }
@@ -98,7 +96,7 @@ function CheckBox() {
                                 }
                                 else if(state.counter+1==9)
                                 {
-                                    dispatch(draw())
+                                    dispatch(matchStatus("DRAW"))
                                 }
                                 setGameOver(res)
                             }
